@@ -1,0 +1,34 @@
+#Define the menu of restaurant in a hotel 
+menu = {
+    "pizza": 250,
+    "burger": 150,
+    "pasta": 200,
+    "salad": 100,
+    "coffee": 80
+}
+#Greating the customer
+print("Welcome to AARU Hotel Restaurant")
+print("pizza - Rs250\nburger - Rs150\npasta - Rs200\nsalad - Rs100\ncoffee - Rs80")
+
+order_total = 0
+#250 + 150 = 400
+
+item_1 = input("Enter the name of item you want to order = ")
+if item_1 in menu:
+    order_total += menu[item_1]
+    print(f"Item{item_1} has been added to your order")
+else:
+    print(f"Ordered item {item_1} is not available!")
+
+another_order = input("DO you want to order another item? (yes/no): ")
+if another_order.lower() == "yes":
+    item_2 = input("Enter the name of second item = ")
+    if item_2 in menu:
+        order_total += menu[item_2]
+        print(f"Item {item_2} has been added to your order")
+    else:
+        print(f"Ordered item {item_2} is not available!")
+
+print(f"The total amount of items to pay is {order_total}")
+
+
